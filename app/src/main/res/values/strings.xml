@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">rstturTestApp</string>
+    <string name="main">Главная</string>
+    <string name="map">Карта</string>
+    <string name="reserve">Бронь</string>
+    <string name="chats">Чаты</string>
+    <string name="more">Еще</string>
 </resources>
