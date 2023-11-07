@@ -1,7 +1,7 @@
-package com.example.data.models
+package com.example.data.models.main_response
 
 import com.example.data.utils.DataMapper
-import com.example.domain.models.ButtonModel
+import com.example.domain.models.main_response.ButtonModel
 
 data class ButtonDto(
     val icon: String,
