@@ -6,11 +6,11 @@ import com.example.domain.models.content_response.ContentModel
 data class ContentDto(
     val id: Int,
     val image: ImageDto,
-    val title: String,
-    val subtitle: String,
+    val title: String?,
+    val subtitle: String?,
     val view: Int,
     val like: Int,
-    val date: DateDto
+    val date: DateDto?
 ) : DataMapper<ContentModel> {
 
     override fun toDomain() = ContentModel(
@@ -20,6 +20,6 @@ data class ContentDto(
         subtitle = subtitle,
         view = view,
         like = like,
-        date = date.toDomain(),
+        date = date?.toDomain(),
     )
 }

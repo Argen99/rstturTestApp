@@ -5,6 +5,7 @@ import androidx.compose.material.BottomNavigation
 import androidx.compose.material.BottomNavigationItem
 import androidx.compose.material.Icon
 import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -13,12 +14,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import com.example.rstturtestapp.R
-import com.example.rstturtestapp.ui.theme.Gray
-import com.example.rstturtestapp.ui.theme.Primary
-import com.example.rstturtestapp.ui.theme.White
 
 @Composable
 fun BottomNavigationBar(
@@ -62,7 +61,7 @@ fun BottomNavigationBar(
     )
 
     BottomNavigation(
-        backgroundColor = White
+        backgroundColor = MaterialTheme.colorScheme.onPrimaryContainer
     ) {
         items.forEachIndexed { index, item ->
             val bottomNavIcon = if (selectedItemIndex == index) {
@@ -84,10 +83,14 @@ fun BottomNavigationBar(
                     )
                 },
                 label = {
-                    Text(text = item.title)
+                    Text(
+                        text = item.title,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis
+                    )
                 },
-                selectedContentColor = Primary,
-                unselectedContentColor = Gray
+                selectedContentColor = MaterialTheme.colorScheme.secondary,
+                unselectedContentColor = MaterialTheme.colorScheme.tertiary
             )
         }
     }

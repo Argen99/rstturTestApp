@@ -71,7 +71,6 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-tooling")
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0-beta01")
     implementation("androidx.compose.runtime:runtime-livedata:1.5.4")
 
     // Navigation
@@ -82,4 +81,10 @@ dependencies {
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // Picasso
+    implementation("com.squareup.picasso:picasso:2.8")
+    
+    // SplashScreen
+    implementation("androidx.core:core-splashscreen:1.1.0-alpha02")
 }
